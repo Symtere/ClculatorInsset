@@ -16,7 +16,6 @@
     <url-pattern>/calculatorInsset/exemple</url-pattern>
   </servlet-mapping>
 
-
   <servlet>
     <servlet-name>romanConvert</servlet-name>
     <servlet-class>org.insset.server.RomanConverterServiceImpl</servlet-class>
@@ -28,6 +27,16 @@
   </servlet-mapping>
   
   <!-- Add your servlet -->
+
+  <servlet>
+    <servlet-name>cedricConvertIntegerToRoman</servlet-name>
+    <servlet-class>org.insset.server.CedricConverterIntegerToRomanServiceImpl</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>cedricConvertIntegerToRoman</servlet-name>
+    <url-pattern>/calculatorInsset/cedricConvertIntegerToRoman</url-pattern>
+  </servlet-mapping>
   
   <!-- Default page to serve -->
   <welcome-file-list>

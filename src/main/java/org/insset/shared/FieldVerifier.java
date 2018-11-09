@@ -52,17 +52,63 @@ public class FieldVerifier {
      * @return true if valid, false if invalid
      */
     public static boolean isValidDecimal(Integer nbr) {
-        //Implement your code
+        try {
+            if(nbr < 1 || nbr > 2000)
+                return false;
+        } catch (Exception e) {
+            return false;
+        }
+        return true;
+    }
+    
+    public static boolean isValidDouble(String nbr, String nbr2) {
+        try {
+            double nbrd = Double.parseDouble(nbr);
+            double nbr2d = Double.parseDouble(nbr2);
+            if(nbrd < 1 || nbrd > 50000)
+                return false;
+            else if(nbr2d < 1 || nbr2d > 50000)
+                return false;
+        } catch (Exception e) {
+            return false;
+        }
         return true;
     }
 
     public static boolean isValidRoman(String nbr) {
-        //Implement your code
+        if(nbr=="") return false;
+        Integer max = nbr.length();
+        for(Integer i = 0; i < max; i++) {
+            char n = nbr.charAt(i);
+            String s=Character.toString(n);
+            
+            if (!s.matches("I|V|X|L|C|D|M"))
+                return false;
+        }
         return true;
     }
 
     public static boolean isValidDate(String date) {
-        //Implement your code
-        return true;
+        try {
+            String[] dateParts = date.split("/");
+            
+            if(dateParts.length != 3)
+                return false;
+            
+            Integer day = Integer.parseInt(dateParts[0]);
+            Integer month = Integer.parseInt(dateParts[1]);
+            Integer year = Integer.parseInt(dateParts[2]);
+            
+            if(day < 1 || day > 31)
+                return false;
+            if(month < 1 || month > 12)
+                return false;
+            if(year < 1 || year > 2000)
+                return false;
+            
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
     }
 }

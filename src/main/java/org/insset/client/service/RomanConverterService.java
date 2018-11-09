@@ -22,7 +22,7 @@ public interface RomanConverterService extends RemoteService {
      * @return
      * @throws IllegalArgumentException
      */
-    Integer convertRomanToArabe(String nbr) throws IllegalArgumentException;
+    String convertRomanToArabe(String nbr) throws IllegalArgumentException;
 
     String convertArabeToRoman(Integer nbr) throws IllegalArgumentException;
 

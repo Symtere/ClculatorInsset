@@ -128,13 +128,13 @@ public class CalculatorDecimalPresenter extends Composite {
             errorLabelRToA.setText("Format incorect");
             return;
         }
-        service.convertRomanToArabe(valR.getText(), new AsyncCallback<Integer>() {
+        service.convertRomanToArabe(valR.getText(), new AsyncCallback<String>() {
             public void onFailure(Throwable caught) {
                 // Show the RPC error message to the user
 //                Window.alert(SERVER_ERROR);
             }
 
-            public void onSuccess(Integer result) {
+            public void onSuccess(String result) {
                 errorLabelRToA.setText(" ");
                 new DialogBoxInssetPresenter("Convertion Roman to arabe", valR.getText(), String.valueOf(result));
             }
@@ -176,8 +176,8 @@ public class CalculatorDecimalPresenter extends Composite {
     private void convertDate() {
         //Verif
         if (!FieldVerifier.isValidDate(valD.getText())) {
-            errorLabelAToR.addStyleName("serverResponseLabelError");
-            errorLabelAToR.setText("Format incorect");
+            errorLabelD.addStyleName("serverResponseLabelError");
+            errorLabelD.setText("Format incorect");
             return;
         }
         //call server

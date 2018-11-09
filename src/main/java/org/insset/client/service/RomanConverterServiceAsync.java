@@ -20,7 +20,7 @@ public interface RomanConverterServiceAsync {
      * @return
      * @throws IllegalArgumentException
      */
-    void convertRomanToArabe(String nbr, AsyncCallback<Integer> callback);
+    void convertRomanToArabe(String nbr, AsyncCallback<String> callback);
 
     void convertArabeToRoman(Integer nbr, AsyncCallback<String> callback);
 
