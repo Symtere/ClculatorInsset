@@ -49,7 +49,7 @@ public class DialogBoxInssetPresenter2 extends DialogBox {
         dialogVPanel.add(textToServerLabel);
         dialogVPanel.add(new HTML("<br><b>Montant de la reduction :</b>"));
         dialogVPanel.add(serverResponseLabel);
-        dialogVPanel.add(new HTML("<br><b>Prix total :</b>"));
+        dialogVPanel.add(new HTML("<br><b>Prix après réduction :</b>"));
         dialogVPanel.add(serverResponse2Label);
         dialogVPanel.setHorizontalAlignment(VerticalPanel.ALIGN_RIGHT);
         dialogVPanel.add(closeButton);
